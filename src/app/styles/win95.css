@@ -1,0 +1,119 @@
+.win95-window {
+    border: 2px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    background-color: #c0c0c0;
+    position: relative;
+    box-shadow: 1px 1px 0 #000000;
+    width: 640px;  /* 고정 너비 추가 */
+  }
+  .window-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a; /* 어두운 배경색 */
+    padding: 20px;
+  }  
+  .win95-title-bar {
+    background: #000080;
+    color: #ffffff;
+    padding: 2px 3px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+  }
+  
+  .win95-title-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    image-rendering: pixelated;
+  }
+  
+  .win95-toolbar {
+    background: #c0c0c0;
+    padding: 2px;
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid #808080;
+    border-top: 1px solid #ffffff;
+  }
+  
+  .win95-select-container {
+    display: flex;
+    align-items: center;
+    background: #c0c0c0;
+    border: 1px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    padding-right: 1px;
+  }
+  
+  .win95-select {
+    background: #c0c0c0;
+    border: 1px inset #808080;
+    padding: 1px 3px;
+    font-size: 11px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    height: 21px;
+  }
+  
+  .win95-button {
+    width: 23px;
+    height: 21px;
+    background: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+  }
+  
+  .win95-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    padding: 2px 0 0 2px;
+  }
+  
+  .win95-button img {
+    width: 16px;
+    height: 16px;
+    image-rendering: pixelated;
+  }
+  
+  .win95-title-button {
+    width: 16px;
+    height: 16px;
+    background: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+  }
+  
+  .win95-content {
+    background: #000000;
+    color: #ffffff;
+    padding: 2px 4px;
+    font-family: 'DOS', "Consolas", monospace;
+    height: 400px;      
+    overflow-y: auto;   
+    line-height: 1.2;
+    font-size: 14px;
+  }
+  
+  .dos-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: #c6c6c6;
+    margin-left: 1px;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
