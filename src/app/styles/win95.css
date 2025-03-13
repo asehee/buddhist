@@ -117,3 +117,123 @@
   @keyframes blink {
     50% { opacity: 0; }
   }
+  /* win95.css에 추가할 내용 */
+
+/* 기본 창 스타일 */
+.win95-window {
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: 2px 2px 0 #000000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 타이틀 바 스타일 */
+.win95-title-bar {
+  background-color: #000080;
+  color: white;
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: 12px;
+  user-select: none;
+}
+
+/* DOS 콘텐츠 영역 */
+.win95-content {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  overflow: auto;
+  flex: 1;
+  height: 100%;
+}
+
+/* DOS 커서 깜빡임 애니메이션 */
+.dos-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 툴바 스타일 */
+.win95-toolbar {
+  background-color: #c0c0c0;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #808080;
+}
+
+/* 버튼 스타일 */
+.win95-button {
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 2px 4px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+
+.win95-button:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* 타이틀 버튼 스타일 */
+.win95-title-button {
+  background-color: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  width: 16px;
+  height: 14px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.win95-title-button:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* 셀렉트 박스 스타일 */
+.win95-select-container {
+  position: relative;
+  display: inline-block;
+}
+
+.win95-select {
+  appearance: none;
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 2px 16px 2px 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.win95-select-container::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000;
+  pointer-events: none;
+}

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect, useRef } from 'react';
 
 const ContentArea: React.FC = () => {
@@ -100,22 +101,33 @@ const ContentArea: React.FC = () => {
 
   return (
     <div 
-      className="win95-content"
+      className="win95-content w-full h-full overflow-auto"
       ref={contentRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
       autoFocus
+      style={{
+        backgroundColor: '#000',
+        color: '#fff',
+        fontFamily: 'Consolas, Monaco, "Courier New", monospace',
+        padding: '8px',
+        flex: '1',
+        display: 'flex',
+        flexDirection: 'column'
+      }}
     >
-      {lines.map((line, index) => (
-        <div key={index}>{line}</div>
-      ))}
-      <div>
-        {currentIndex >= initialMessages.length && (
-          <>
-            C:\WINDOWS{'>'}{currentInput}
-            <span className="dos-cursor">█</span>
-          </>
-        )}
+      <div className="flex-1">
+        {lines.map((line, index) => (
+          <div key={index}>{line}</div>
+        ))}
+        <div>
+          {currentIndex >= initialMessages.length && (
+            <>
+              C:\WINDOWS{'>'}{currentInput}
+              <span className="dos-cursor">█</span>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
